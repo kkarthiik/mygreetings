@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Friendship Day!</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #ff9a9e, #fecfef);
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+        }
+        .card {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .card h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: #fff;
+        }
+        .card p {
+            font-size: 1.2em;
+            color: #fff;
+        }
+        .button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #ff6f61;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #ff3b2f;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Happy Friendship Day!</h1>
+        <p>To my best friend, Astha, you're the best!</p>
+        <button class="button" onclick="promptPassword()">Click me for a surprise!</button><br><br>
+        <img id="surpriseImage" class="hidden" src="image.png" alt="Surprise Image" >
+    </div>
+
+    <script>
+        function promptPassword() {
+            var password = prompt("Please enter the password: Password is your date of birth in the format: ddmmyyyy");
+            if (password === "140307") {
+                document.getElementById('surpriseImage').classList.remove('hidden');
+                alert('Astha, you are an amazing friend! 💖Click "OK" for surprise.');
+            } else {
+                alert('Incorrect password. Please try again.');
+            }
+        }
+    </script>
+</body>
+</html>
